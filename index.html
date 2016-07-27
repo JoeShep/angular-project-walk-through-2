@@ -17,14 +17,14 @@
 
   <!-- ============= NAV BAR ============= -->
   <!-- BEGINNING OF NAV -->
-  <div></div>
+  <div ng-include="'./partials/nav.html'"></div>
   <!-- END OF NAV BAR -->
 
 
   <!-- ============= MAIN CONTAINER ============= -->
   <!-- CONTAINER FOR VIEW AND NEW -->
-  <div class="container z-depth-3"></div>
-  <!-- END OF CONTAINER FOR VIEW AND NEW -->
+  <div class="container z-depth-3" ng-view></div>
+  <!-- END OF MAIN CONTAINER -->
 
   <!-- ============= LINK TAGS ============= -->
   <!-- BEGINNING OF THE DANG LINK TAGS -->
@@ -32,13 +32,16 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   <!-- Materialize: Latest compiled and minified JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.1.8/angular-materialize.min.js"></script>
-  <script type="javascript" src="lib/node_modules/angular/angular.min.js"></script>
+  <script src="lib/node_modules/angular/angular.min.js"></script>
+  <script src="lib/node_modules/angular-route/angular-route.min.js"></script>
   <!-- APP FIRST -->
   <script src="app/app.js"></script>
   <!-- FACTORIES SECOND -->
   <!-- CONTROLLERS LAST -->
   <script src="app/controllers/navCtrl.js"></script>
+  <script src="app/controllers/selectMadlibCtrl.js"></script>
+  <script src="app/controllers/inputMadlibCtrl.js"></script>
+  <script src="app/controllers/outputMadlibCtrl.js"></script>
   <!-- END OF THE DANG LINK TAGS -->
 
 </body>
