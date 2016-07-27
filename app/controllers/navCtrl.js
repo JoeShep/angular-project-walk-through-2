@@ -1,3 +1,3 @@
-app.controller("navCtrl", function($scope){
-  $scope.userIsLoggedIn = false;
+app.controller("navCtrl", function($scope, $rootScope){
+  $rootScope.userIsLoggedIn = false;
 });

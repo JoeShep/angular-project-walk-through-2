@@ -3,31 +3,56 @@
 
 <div class="row">
   <form class="col s6 offset-s3">
+    <div class="input-field">
+      <input type="text" class="validate" ng-model="noun0">
+      <label>Noun</label>
+    </div>
       <div class="input-field">
-        <input  id="noun" type="text" class="validate">
-        <label for="noun">Noun</label>
+        <input type="text" class="validate" ng-model="adjective0">
+        <label>Adjective</label>
       </div>
       <div class="input-field">
-        <input id="verb" type="text" class="validate">
-        <label for="verb">Verb</label>
+        <input type="text" class="validate" ng-model="adjective1">
+        <label>Adjective</label>
       </div>
       <div class="input-field">
-        <input id="adjective" type="text" class="validate">
-        <label for="adjective">Adjective</label>
+        <input type="text" class="validate" ng-model="adjective2">
+        <label>Adjective</label>
       </div>
       <div class="input-field">
-        <input id="plural" type="text" class="validate">
-        <label for="plural">Plural Noun</label>
+        <input type="text" class="validate" ng-model="verb0">
+        <label>Verb</label>
       </div>
       <div class="input-field">
-        <input id="classmate" type="text" class="validate">
-        <label for="classmate">Name of Classmate</label>
+        <input type="text" class="validate" ng-model="verb1">
+        <label>Verb</label>
       </div>
       <div class="input-field">
-        <input id="ta" type="text" class="validate">
-        <label for="ta">Name of TA</label>
+        <input type="text" class="validate" ng-model="verb2">
+        <label>Verb</label>
+      </div>
+      <div class="input-field">
+        <input type="text" class="validate" ng-model="pluralNoun0">
+        <label>Plural Noun</label>
+      </div>
+      <div class="input-field">
+        <input type="text" class="validate" ng-model="nameOfTA0">
+        <label>Name of TA</label>
+      </div>
+      <div class="input-field">
+        <input type="text" class="validate" ng-model="nameOfClassmate0">
+        <label>Name of Classmate</label>
       </div>
 
-      <div class="row"><div class="center-align"><button class="btn waves-effect waves-light">Submit<i class="material-icons right">send</i></button></div></div>
+      <div class="row"><div class="center-align"><button class="btn waves-effect waves-light" ng-click="completeStory()">Submit<i class="material-icons right">send</i></button></div></div>
   </form>
+</div>
+
+<div class="container" ng-hide="storyNotDone">
+  <ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header teal"><i class="material-icons">touch_app</i>Reveal my story.</div>
+      <div class="collapsible-body"><p>{{madLibBeesknees}}</p></div>
+    </li>
+  </ul>
 </div>
